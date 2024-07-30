@@ -1,0 +1,12 @@
+{
+  "name": "applied",
+  "version": "1.0.0",
+  "description": "Week 2 Applied",
+  "main": "readFile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jenul Ferdinand",
+  "license": "ISC"
+}
