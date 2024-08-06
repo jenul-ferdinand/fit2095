@@ -1,0 +1,19 @@
+{
+  "name": "lab-tasks",
+  "version": "1.0.0",
+  "description": "Week 3 Lab Tasks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "bootstrap"
+  ],
+  "author": "Jenul Ferdinand 33119805",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.19.2"
+  }
+}
