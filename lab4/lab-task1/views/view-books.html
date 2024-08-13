@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <title>Add Book Page</title>
+    <link href="/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+        <div class="album py-5">
+            <div class="container">
+
+                <a type="button" class="btn btn-primary" href="/">Home</a>
+                <a type="button" class="btn btn-primary" href="/add-book">Add New Book</a>
+                
+                <h3 class="my-2">Add New Book Form</h3>
+
+                <div class="row row-cols-1 g-3">
+                    <div class="col">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Book Name</th>
+                                <th scope="col">Author</th>
+                                <th scope="col">Published Year</th>
+                              </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <% for (let i=0; i <records.length; i++){ %>
+                                <tr>
+                                <th scope="row"><%= records[i].id %></th>
+                                <td><%= records[i].title %></td>
+                                <td><%= records[i].author %></td>
+                                <td><%= records[i].year %></td>
+                              </tr>
+                              <% } %>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

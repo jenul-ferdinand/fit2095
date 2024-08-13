@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+	<head>
+		<title>Add Book Page</title>
+		<link href="/bootstrap.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<main>
+			<div class="album py-5">
+				<div class="container">
+					<a type="button" class="btn btn-primary" href="/">Home</a>
+					<a type="button" class="btn btn-primary" href="/view-books">View All Books</a>
+
+					<h3 class="my-2">Add New Book Form</h3>
+
+					<div class="row row-cols-1 row-cols-sm-2 g-3">
+						<div class="col">
+							<div class="card shadow-sm">
+								<div class="card-body">
+									<form action="/add-book-post" method="POST">
+										<div class="mb-3">
+											<label for="title" class="form-label">Book Name</label>
+											<input type="text" name="title" class="form-control" id="title" placeholder="Enter book name" />
+										</div>
+
+										<div class="mb-3">
+											<label for="author" class="form-label">Author Name</label>
+											<input type="text" name="author" class="form-control" id="author" placeholder="Enter author name" />
+										</div>
+
+										<div class="mb-3">
+											<label for="year" class="form-label">Publication Year</label>
+											<input type="number" min="1900" max="2099" step="1" value="2023" name="year" class="form-control" id="year" placeholder="Enter publication year" />
+										</div>
+
+										<button class="btn btn-primary">Submit</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
