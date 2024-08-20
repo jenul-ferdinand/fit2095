@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <%- include('partials/_navbar.ejs') %>
+
+        <div class="mx-auto ms">
+            <form action="/parcels/add" method="POST">
+                <!-- Sender -->
+                <label class="col-form-label mt-3" for="inputSender">Sender</label>
+                <input type="text" class="form-control" placeholder="Parcel Sender?" id="inputSender" name="sender" required>
+
+                <!-- Address -->
+                <label class="col-form-label mt-3" for="inputAddress">Address</label>
+                <input type="text" class="form-control" placeholder="Address" id="inputAddress" name="address" required>
+
+                <!-- Weight -->
+                <label class="col-form-label mt-3" for="inputWeight">Weight</label>
+                <input type="text" class="form-control" placeholder="Parcel Weight" id="inputWeight" name="weight" required>
+
+                <!-- Fragile Checkbox -->
+                <div class="form-check form-switch mt-4">
+                    <input class="form-check-input" type="checkbox" id="checkFragile" name="checkFragile">
+                    <label class="form-check-label" for="checkFragile">Fragile?</label>
+                </div>
+
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-success">Add This Parcel</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

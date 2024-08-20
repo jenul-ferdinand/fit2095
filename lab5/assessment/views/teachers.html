@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <table class="table table-hover" border="1"> 
+            <tr>
+                <th>Teacher ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Rank</th>
+            </tr>
+            <% for(let i=0; i < teachers.length; i++){ %>
+                <tr>
+                    <td><%= teachers[i].id %></td>
+                    <td><%= teachers[i].tName %></td>
+                    <td><%= teachers[i].tSalary %></td>
+                    <td><%= teachers[i].tRank %></td>
+                </tr>
+            <%} %>
+
+            <% if (teachers.length == 0) { %>
+                <tr>
+                    <td>No Teachers Available</td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>

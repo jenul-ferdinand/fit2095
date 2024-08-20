@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <p>Current No. of Teachers: <%= teachers.length %></p>
+
+        <div class="mx-auto ms">
+            <form action="/jenul/teachers/add" method="POST">
+                <!-- Teacher Name -->
+                <label class="col-form-label mt-3" for="inputName">Name</label>
+                <input type="text" class="form-control" placeholder="Teacher Name" id="inputName" name="name" required>
+
+                <!-- Teacher Salary -->
+                <label class="col-form-label mt-3" for="inputSalary">Salary</label>
+                <input type="number" class="form-control" placeholder="Teacher Salary" id="inputSalary" name="salary" required>
+
+                <!-- Weight -->
+                <label class="col-form-label mt-3" for="inputRank">Rank</label>
+                <input type="text" class="form-control" placeholder="Teacher Rank" id="inputRank" name="rank" required>
+
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-success">Add This Teacher</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

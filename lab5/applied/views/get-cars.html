@@ -1,0 +1,20 @@
+<html>
+<body>
+    <table border="1" > 
+        <tr>
+            <th>MongoDB ID</th>
+            <th>Car ID</th>
+            <th>Maker</th>
+            <th>Model</th>
+        </tr>
+        <% for(let i=0;i<cars.length;i++){ %>
+        <tr>
+            <td><%= cars[i]._id %></td>
+            <td><%= cars[i].id %></td>
+            <td><%= cars[i].maker %></td>
+            <td><%= cars[i].model %></td>
+        </tr>
+        <%} %>
+    </table>
+</body>
+</html>

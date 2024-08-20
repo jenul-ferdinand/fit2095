@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <%- include('partials/_navbar.ejs') %>
+
+        <div class="mx-auto ms">
+            <form action="/parcels/delete" method="POST">
+                <!-- Sender -->
+                <label class="col-form-label mt-3" for="inputSender">Sender</label>
+                <input type="text" class="form-control" placeholder="Parcel Sender?" id="inputSender" name="sender">
+                
+                <!-- ID -->
+                <label class="col-form-label mt-3" for="inputId">Sender</label>
+                <input type="text" class="form-control" placeholder="Parcel Mongo ID" id="inputId" name="id">
+
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-success">Add This Parcel</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

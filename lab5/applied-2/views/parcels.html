@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <%- include('partials/_navbar.ejs') %>
+        
+        <table class="table table-hover" border="1"> 
+            <tr>
+                <th>MongoDB ID</th>
+                <th>Sender</th>
+                <th>Address</th>
+                <th>Weight</th>
+                <th>Fragile</th>
+            </tr>
+            <% for(let i=0; i < parcels.length; i++){ %>
+            <tr>
+                <td><%= parcels[i]._id %></td>
+                <td><%= parcels[i].sender %></td>
+                <td><%= parcels[i].address %></td>
+                <td><%= parcels[i].weight %></td>
+                <td><%= parcels[i].fragile %></td>
+            </tr>
+            <%} %>
+        </table>
+    </body>
+</html>
