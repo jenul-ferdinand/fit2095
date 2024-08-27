@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <table class="table table-hover" border="1"> 
+            <tr>
+                <th>Unit Name</th>
+                <th>Unit Code</th>
+                <th>No. of Students</th>
+                <th>Is Active</th>
+            </tr>
+            <% for(let i=0; i < units.length; i++){ %>
+                <tr>
+                    <td><%= units[i].name %></td>
+                    <td><%= units[i].code %></td>
+                    <td><%= units[i].numStudents %></td>
+                    <td><%= units[i].isActive %></td>
+                </tr>
+            <%} %>
+
+            <% if (units.length == 0) { %>
+                <tr>
+                    <td>No Units Available</td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>

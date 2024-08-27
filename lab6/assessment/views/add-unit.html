@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <p>Current No. of Units: <%= units.length %></p>
+
+        <div class="mx-auto ms">
+            <form action="/jenul/units/add" method="POST">
+                <!-- Unit Name -->
+                <label class="col-form-label mt-3" for="inputName">Name</label>
+                <input type="text" class="form-control" placeholder="Unit Name" id="inputName" name="name" required>
+
+                <!-- Unit CODE -->
+                <label class="col-form-label mt-3" for="inputCode">Unit Code</label>
+                <input type="text" class="form-control" placeholder="Unit Code" id="inputCode" name="code" required>
+
+                <!-- Number of Students -->
+                <label class="col-form-label mt-3" for="inputNumStudents">Number of Students</label>
+                <input type="number" class="form-control" placeholder="Number of Students" id="inputNumStudents" name="numStudents" required>
+
+                <!-- isActive -->
+                <div class="form-check form-switch mt-4">
+                    <input class="form-check-input" type="checkbox" id="checkIsActive" name="isActive">
+                    <label class="form-check-label" for="checkIsActive">Is Active?</label>
+                </div>
+
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-success">Add This Unit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
