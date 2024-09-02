@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const foodRouter = require('./routes/food-routes');
+const recipeRouter = require('./routes/recipe-routes');
 
 //? Configure Express
 const app = express();   // Initalise express app
@@ -16,6 +18,9 @@ async function connectDB(url) {
 
 connectDB(url)
     .then(console.log)
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err));
 
+//? Configure Express App
+app.use('/food', foodRouter)
+app.use('/recipe', recipeRouter)
 
