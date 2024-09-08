@@ -1,0 +1,45 @@
+<!-- Data Binding - String Interpolation -->
+<h1>{{ title }}</h1>
+
+<!-- Event Binding -->
+<button class="btn btn-primary" [disabled]="randInt==5" (click)="getNewRandomInt(25)">Get a new random integer</button>
+<h3>The random value is: {{randInt}}</h3>
+
+<br/> <br/> 
+<h3>Your full name is {{fullName}}</h3>
+<br/>
+
+<!-- Input Name -->
+<input [(ngModel)]="fullName" type="text"/>
+<br/>
+<button class="btn btn-primary" [disabled]="studentNames.length==3" (click)="addNameToArray()">Click to add name {{studentNames.length}}</button>
+
+<!-- Showing Name Count -->
+@if (studentNames.length == 0) {
+  <h3>We don't have names at the moment</h3>
+} @else {
+  <h3>We have {{studentNames.length}} names in our system</h3>
+}
+
+<!-- Table -->
+<table>
+  @for (name of studentNames; track $index) {
+    <tr>
+      <td>{{$index+1}}</td>
+      <td>{{name}}</td>
+    </tr>
+  }
+</table>
+
+<!-- Switch Statement -->
+@switch (randInt) {
+  @case (0) {
+    <h1>We got a zero!</h1>
+  }
+  @case (1) {
+    <h1>We got a one!</h1>
+  }
+  @default {
+    <h1>We got some other value...</h1>
+  }
+}
