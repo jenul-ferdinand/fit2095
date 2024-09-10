@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <table class="table table-hover" border="1"> 
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>No. of Houses</th>
+            </tr>
+            <% for(let i=0; i < builders.length; i++){ %>
+                <tr>
+                    <td><%= builders[i].name %></td>
+                    <td><%= builders[i].location %></td>
+                    <td><%= builders[i].houses.length %></td>
+                </tr>
+            <%} %>
+
+            <% if (builders.length == 0) { %>
+                <tr>
+                    <td>No Units Available</td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>

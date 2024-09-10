@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link href="/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <h2>Add a New Builder</h2>
+    <p>Current number of builders: <%= buildersCount %></p>
+    
+    <form action="/33119805/builders/add" method="POST">
+        <div>
+            <label for="name">Builder Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+        <button type="submit">Add Builder</button>
+    </form>
+</body>
+</html>

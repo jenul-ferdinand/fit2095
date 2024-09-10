@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link href="/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h1>List of Houses</h1>
+        <table class="table table-hover" border="1"> 
+            <tr>
+                <th>Size (sqft)</th>
+                <th>Storey</th>
+                <th>Cost ($)</th>
+                <th>Builder</th>
+            </tr>
+            <% for(let i = 0; i < houses.length; i++) { %>
+                <tr>
+                    <td><%= houses[i].size %></td>
+                    <td><%= houses[i].storey %></td>
+                    <td><%= houses[i].cost %></td>
+                    <td><%= houses[i].builder ? houses[i].builder.name : 'N/A' %></td>
+                </tr>
+            <% } %>
+
+            <% if (houses.length === 0) { %>
+                <tr>
+                    <td colspan="4">No houses available</td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
