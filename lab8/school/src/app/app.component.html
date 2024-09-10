@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<p>No. of Students {{students.length}}</p>
+
+<input type="text" />
+<button type="submit" (click)="addStudent()">Add Student</button>
+
+<table class="table table-dark table-striped">
+  @if (students.length > 0) {
+    <thead class="thead-light">
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Date of Birth</td>
+      </tr>
+    </thead>
+  } @else {
+    We currently have no students...
+  }
+  <tbody>
+    @for (student of students; track $index) {
+      <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.addr}}</td>
+        <td>{{student.dob}}</td>
+      </tr>
+    }
+  </tbody>
+</table>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lecture": {
+    "fleet": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/lecture",
+            "outputPath": "dist/fleet",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lecture:build:production"
+              "buildTarget": "fleet:build:production"
             },
             "development": {
-              "buildTarget": "lecture:build:development"
+              "buildTarget": "fleet:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,8 +93,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

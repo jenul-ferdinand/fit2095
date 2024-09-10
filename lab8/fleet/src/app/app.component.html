@@ -1,0 +1,61 @@
+<!-- Title and Details -->
+<h3>{{ title }}</h3>
+<h5>We have {{ fleet.length }} cars in our fleet</h5>
+
+<!-- Form -->
+<form style="margin-left: 1em; margin-right: 3em; width: 50%">
+  <div class="form-group">
+    <label for="maker">Maker</label>
+    <input
+      type="text"
+      class="form-control"
+      id="maker"
+      name="maker"
+      [(ngModel)]="car.maker"
+    />
+  </div>
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input
+      type="text"
+      class="form-control"
+      id="model"
+      name="model"
+      [(ngModel)]="car.model"
+    />
+  </div>
+  <div class="form-group">
+    <label for="year">Year</label>
+    <input
+      type="number"
+      class="form-control"
+      id="year"
+      name="year"
+      [(ngModel)]="car.year"
+    />
+  </div>
+  <br />
+  <button (click)="addCar()" class="btn btn-primary">Add Car</button>
+</form>
+
+<!-- Table -->
+<table class="table table-striped" style="width: 50%">
+  <thead class="table-dark">
+    <tr>
+      <th>#</th>
+      <th>Maker</th>
+      <th>Model</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(car of fleet;track $index; let i=$index){
+    <tr>
+      <td>{{ i + 1 }}</td>
+      <td>{{ fleet[i].maker }}</td>
+      <td>{{ fleet[i].model }}</td>
+      <td>{{ fleet[i].year }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
