@@ -1,0 +1,20 @@
+<h1>Cars in Fleet</h1>
+
+@if (fleet.length === 0) {
+    <h3>We have no cars at the moment</h3>
+} @else {
+    <table>
+        <tr>
+            <th>Maker</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            @for (car of fleet; track $index) {
+                <td>{{car.maker}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.year}}</td>
+            }
+        </tr>
+    </table>
+}

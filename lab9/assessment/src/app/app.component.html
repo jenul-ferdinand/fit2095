@@ -1,0 +1,46 @@
+<!-- Centered Elements -->
+<div class="d-flex flex-column min-vh-100"> 
+  <div class="mx-auto">
+    <!-- Page title -->
+    <h1>{{title}}</h1>
+
+    <!-- No. of PCs -->
+    <p>No. of PCs {{PCs.length}}</p>
+  
+    <!-- Adding PC form -->
+    <h3>Add a new PC</h3>
+    <input type="text" class="form-control mt-2" placeholder="CPU" [(ngModel)]="PC.CPU"/>
+    <input type="text" class="form-control mt-2" placeholder="RAM" [(ngModel)]="PC.RAM"/>
+    <input type="text" class="form-control mt-2" placeholder="HDD" [(ngModel)]="PC.HDD"/>
+    <button type="submit" class="btn btn-primary mt-3" (click)="addPC()">Add PC</button>
+
+    <!-- Table -->
+    <h3 class="mt-4">List of PCs</h3>
+    <table class="table table-light table-striped">
+      @if (PCs.length > 0) {
+        <thead class="thead-light">
+          <tr>
+            <td>CPU</td>
+            <td>RAM</td>
+            <td>HDD</td>
+          </tr>
+        </thead>
+        <tbody>
+          @for (pc of PCs; track $index) {
+            <tr>
+              <td>{{pc.CPU}}</td>
+              <td>{{pc.RAM}}</td>
+              <td>{{pc.HDD}}</td>
+            </tr>
+          }
+        </tbody>
+      }
+    </table>
+
+    <!-- No Pc's text -->
+    @if (PCs.length <= 0) { 
+      <p>We currently have no PCs</p>
+    }
+
+  </div>
+</div>
