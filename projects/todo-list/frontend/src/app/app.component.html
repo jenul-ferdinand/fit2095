@@ -1,12 +1,9 @@
+<tui-root>
+<app-header></app-header>
 <div class="container mt-4">
 <p>Message from backend: {{message}}</p>
 
-<!-- Create Task -->
-<div class="form-group">
-    <label for="createTask">Create Task</label>
-    <input class="form-control" id="createTask" [(ngModel)]="task_title" type="text"/>
-    <button class="btn btn-primary ms-3 mt-3" (click)="createTask(task_title)">Create Task</button>
-</div>
+<app-add-task></app-add-task>
 
 <!-- Task Table -->
 <table class="table table-striped">
@@ -30,3 +27,4 @@
     </tbody>
 </table>
 </div>
+</tui-root>

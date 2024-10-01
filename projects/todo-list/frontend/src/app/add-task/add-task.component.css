@@ -1,0 +1,40 @@
+.mx-auto {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of viewport for vertical centering */
+}
+
+form {
+    display: flex; /* Enable Flexbox for the form */
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center; /* Center elements inside the form */
+    align-items: center; /* Center elements inside the form */
+    width: 100%; /* Adjust width as needed */
+    max-width: 800px; /* Set a maximum width for the form */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    background: #fff; /* Optional: Background color */
+    border-radius: 8px; /* Optional: Border radius */
+}
+
+tui-textfield {
+    width: 100%; /* Make the input field stretch to fill its container */
+}
+
+input[formControlName="testValue"] {
+    width: 100%; /* Make the input field fill its container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+label[tuiLabel] {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+button {
+    margin-top: 10px; 
+}

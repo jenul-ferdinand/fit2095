@@ -1,0 +1,11 @@
+<!-- Create Task -->
+<div class="mx-auto">
+    <form>
+        <tui-textfield class="tui-space_top-4">
+            <label tuiLabel>Create Task</label>
+            <input tuiTextField [(ngModel)]="task_title" type="text"/>
+        </tui-textfield>
+
+        <button size='l' tuiButton type="button" (click)="createTask(task_title)">Create Task</button>
+    </form>
+</div>

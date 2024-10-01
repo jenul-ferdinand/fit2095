@@ -1,16 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { TUI_DARK_MODE, TuiButton, TuiLabel, TuiRoot, TuiTextfield } from "@taiga-ui/core";
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ApiService } from '../api.service';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TuiSwitch } from '@taiga-ui/kit';
 
 // Import Task Interface
 import { Task } from '../models/task.model';
+import { HeaderComponent } from "./header/header.component";
+import { AddTaskComponent } from "./add-task/add-task.component";
 
 //! App Component
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    TuiRoot,
+    TuiButton,
+    ReactiveFormsModule,
+    TuiTextfield,
+    TuiLabel,
+    TuiSwitch,
+    HeaderComponent,
+    AddTaskComponent
+],
   providers:[ApiService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -32,40 +47,8 @@ export class AppComponent implements OnInit {
       (error : any) => { console.error('An error occurred', error); }
     );
 
-    this.getTasks();
+    //this.getTasks();
   }
 
-  // * Create a Task
-  createTask(name: string) {
-    // Create the Task object
-    let task: Task = {
-      title: name,
-      completed: false  // Assuming a new task is incomplete by default
-    };
   
-    // kAdd the task to the local tasks array
-    this.tasks.push(task);
-  
-    // Send the task to the backend API for persistence
-    this.apiService.createTask(task).subscribe(
-      (response: any) => { console.log('Task successfully created:', response); },
-      (error: any) => { console.error('Error creating task:', error); }
-    );
-  }
-
-  // * Get All Tasks
-  getTasks() {
-    this.apiService.getTasks().subscribe(
-      (data: any) => { 
-        console.log('Successfully fetched all tasks from DB:', data);
-        this.tasks = data;
-      },
-      (error: any) => { console.error(error) }
-    )
-  }
-
-  // TODO Delete a Task
-  deleteTask() {
-    
-  }
 }
