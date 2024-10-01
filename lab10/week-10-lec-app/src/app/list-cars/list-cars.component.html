@@ -1,0 +1,38 @@
+<h1>Cars in Fleet</h1>
+
+
+
+
+<div class="container mt-6">
+  <div class="card">
+    <div class="card-header">List Cars</div>
+    <div class="card-body">
+
+      @if(fleet.length===0){
+      <h3>We have no cars at the moment</h3>
+      }@else{
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Maker</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Old/New</th>
+            <th>Short/Long</th>
+          </tr>
+        </thead>
+        @for(car of fleet;track $index){
+        <tr>
+          <td>{{car.maker}}</td>
+          <td>{{car.model}}</td>
+          <td>{{car.year}}</td>
+          <td>{{car.year|oldNew:2000}}</td>
+          <td>{{car.model|shortLongModel:5}}</td>
+        </tr>
+        }
+      </table>
+      }
+    </div>
+    <div class="card-footer">We have {{fleet.length}} cars</div>
+  </div>
+</div>

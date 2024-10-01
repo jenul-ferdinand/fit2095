@@ -1,0 +1,11 @@
+<div class="section">
+    <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" class="form-control" id="studentName" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+        <label for="studentFees">Fees</label>
+        <input type="number" class="form-control" id="studentFees" [(ngModel)]="fees">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onAddStudent()">Add Student</button>
+</div>

@@ -1,0 +1,17 @@
+<div class="container mt-6">
+  <div class="card">
+    <div class="card-header">Socket Chat</div>
+    <div class="card-body">
+
+      <form>
+        <div class="form-group">
+          <label for="msg">Message:</label>
+          <input type="text" class="form-control" placeholder="Enter Message" id="msg" [(ngModel)]="msg">
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="sendMessage()">Send Message</button>
+        <button class="btn btn-primary" (click)="sendMessage2()">Send Message2</button>
+        <h3>{{response}}</h3>
+      </form>
+    </div>
+  </div>

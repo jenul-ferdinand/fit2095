@@ -1,0 +1,16 @@
+<div class="section">
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Fees</th>
+        </tr>
+        @for (student of students; track $index) {
+            <tr>
+                <td>{{student.id }}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.fees}}</td>
+            </tr>
+        }
+    </table>
+</div>

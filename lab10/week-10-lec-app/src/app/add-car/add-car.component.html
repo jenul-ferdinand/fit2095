@@ -1,0 +1,22 @@
+<div class="container mt-6">
+  <div class="card">
+    <div class="card-header">List Cars</div>
+    <div class="card-body">
+
+      <form>
+        <div class="form-group">
+          <label for="maker">Maker:</label>
+          <input type="text" class="form-control" placeholder="Enter Maker" id="maker" [(ngModel)]="car.maker">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Model:</label>
+          <input type="text" class="form-control" placeholder="Enter Model" id="model" [(ngModel)]="car.model">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Year:</label>
+          <input type="number" class="form-control" placeholder="Enter Year" id="year" [(ngModel)]="car.year">
+        </div>
+        <button class="btn btn-primary" (click)="addCar()">Add Car</button>
+      </form>
+    </div>
+  </div>
