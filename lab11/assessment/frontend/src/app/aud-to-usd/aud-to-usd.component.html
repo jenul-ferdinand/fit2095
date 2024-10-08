@@ -1,0 +1,13 @@
+<div class="section">
+    <div class="form-group">
+        <label for="fees">AUD Number Here</label>
+        <input type="number" class="form-control" id="fees" [(ngModel)]="aud">
+    </div>
+
+    <p>Converted value: ${{ usd }} USD</p>
+
+
+
+    <button type="submit" (click)="convertAudToUSd()">Convert</button>
+
+</div>

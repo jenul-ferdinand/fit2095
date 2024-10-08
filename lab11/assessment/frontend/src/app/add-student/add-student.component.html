@@ -1,0 +1,16 @@
+<div class="section">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="student.name">
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" [(ngModel)]="student.age">
+    </div>
+    <div class="form-group">
+        <label for="fees">Fees</label>
+        <input type="number" class="form-control" id="fees" [(ngModel)]="student.fees">
+    </div>
+
+    <button type="submit" (click)="addStudent()">Add Student</button>
+</div>
